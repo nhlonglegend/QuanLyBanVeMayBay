@@ -1,0 +1,235 @@
+{% extends "contact.html" %}
+
+
+{% block head %}
+    {{ super() }}
+    <style type="text/css"></style>
+
+{% endblock %}
+
+{% block form %}
+    <link rel="stylesheet" href="{{url_for('static',filename='css/fontcustomer.css')}}">
+    <h1 style="text-align: center;"><span style="color: #ff0000;">Th&ocirc;ng tin Kh&aacute;ch H&agrave;ng</span></h1>
+    <form class= "sheet-form"action="/insert" method="POST" >
+        <div>
+                <fieldset>
+                    <LEGEND style="color: #ff0000;"> Thông tin hành khách:</LEGEND>
+                    <input id="aut" name="aut" type="hidden" value="1" />
+                    <input id="children" name="children" type="hidden" value="0" />
+                    <input id="inf" name="inf" type="hidden" value="0" /> <input name="nameair" type="hidden" value="vj" />
+            <table style="margin: 0 10px 10px;" width="97%" cellspacing="0" cellpadding="0" >
+            <tbody>
+            <tr>
+            <td>
+                <span style="color: #999999;"><strong>Người lớn</strong></span>
+            </td>
+            <td>
+                <select name="cmbtitleaut_0">
+                    <option value="men">&Ocirc;ng</option>
+                    <option value="woman">B&agrave;</option>
+                    <option value="men">Anh</option>
+                    <option value="woman">Chị</option>
+                </select>
+            </td>
+            <td colspan="2"><span style="color: #999999;">
+                <input id="Quy_Danh" class="inputss" name="Quy_Danh" type="text" value="" />
+            </span>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </fieldset>
+
+
+
+
+            <fieldset>
+                <legend>
+                    <strong>
+                        <span style="color: #ff0000;">Th&ocirc;ng tin h&agrave;nh l&yacute;</span>
+                    </strong>
+                </legend>
+    <!--            <table style="padding: 15px;" width="100%" cellspacing="0" cellpadding="0">-->
+                <table style="margin: 0 10px 10px;" width="97%" cellspacing="0" cellpadding="0"  class = "form-group col-md-6 "  >
+                <tbody>
+                <tr>
+                <td colspan="2">
+                    <span style="font-size: 14px; width: 140px; display: block; text-transform: uppercase; color: #808080;">H&agrave;nh l&yacute; luợt đi</span></td>
+                <td colspan="2">
+
+                    <span style="color: #808080;">h&agrave;nh kh&aacute;ch thứ 1</span>
+                    <select id="cmdhanhly" class="cbobaggage" name="cmbhanhly[]">
+                <option value="0,0">Kh&ocirc;ng mang theo h&agrave;nh l&yacute;</option>
+                <option value="15,220000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ">Th&ecirc;m 15Kg h&agrave;nh l&yacute; 220,000 VND)</option>
+                <option value="20,250000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ">Th&ecirc;m 20Kg h&agrave;nh l&yacute; 250,000 VND)</option>
+                <option value="25,350000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ">Th&ecirc;m 25Kg h&agrave;nh l&yacute; (350,000 VND)</option>
+                <option value="30,480000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      ">Th&ecirc;m 30Kg h&agrave;nh l&yacute; (480,000 VND)</option>
+                <option value="35,550000                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                         ">Th&ecirc;m 35Kg h&agrave;nh l&yacute; (450,000 VND)</option>
+                <option value="40,620000                                                                                                                                                                                                                                                                                                                                                                                                                                                                     ">Th&ecirc;m 40Kg h&agrave;nh l&yacute; (620,000 VND)</option>
+                </select>
+                    <span style="color: #808080;">
+                        <input name="txthanhly1" type="hidden" value="Kh&ocirc;ng mang theo h&agrave;nh l&yacute;" />
+                    </span>
+
+                </td>
+                </tr>
+                </tbody>
+                </table>
+                </fieldset>
+
+
+
+
+            <fieldset><legend><span style="color: #ff0000;"><strong>Th&ocirc;ng Tin Li&ecirc;n Hệ</strong></span></legend>
+            <table style="width: 564px; padding: 15px; height: 340px;" >
+            <tbody>
+            <tr>
+            <td style="width: 178.4px;">
+                <span style="font-weight: bold; color: #808080;">Qu&yacute; danh</span>
+                <br />
+                <select class="gender" name="Quy_Danh" >
+            <option value="6">&Ocirc;ng</option>
+            <option value="7">B&agrave;</option>
+            <option value="8">Anh</option>
+            <option value="9">Chị</option>
+            </select>
+            </td>
+            <td style="width: 342.4px;" colspan="3">
+                <span style="color: #808080;">
+                    <span style="font-weight: bold;">Họ v&agrave; t&ecirc;n</span>
+                    <span class="important">(*)</span>
+                </span>
+                <br />
+                <span style="color: #808080;">
+                <input class="inputs" name="Ten_Khach_Hang" type="text"  />
+            </span>
+            </td>
+            </tr>
+            <tr>
+            <td style="width: 526.4px;" colspan="4">
+                <span style="color: #808080;">
+                    <span style="font-weight: bold;">Điện thoại</span>
+                    <span class="important">(*)</span></span><br />
+                <span style="color: #808080;">
+                    <input id="SDT" class="inputsad" name="SDT" type="text"  />
+                </span>
+            </td>
+            </tr>
+            <tr>
+            <td style="width: 526.4px;" colspan="4">
+                <span style="color: #808080;">
+                    <span style="font-weight: bold;">CMND(Căn Cước)</span>
+                    <span class="important">(*)</span></span><br />
+                <span style="color: #808080;">
+                    <input id="CMND" class="inputsad" name="CMND" type="text" value="" />
+                </span>
+            </td>
+            </tr>
+            <tr>
+            <td style="width: 526.4px;" colspan="4">
+                <span style="font-weight: bold; color: #808080;">Email(Vui l&ograve;ng bỏ qua nếu kh&ocirc;ng c&oacute; email)</span>
+                <br /><span style="color: #808080;">
+                <input id="Email" class="inputsad" name="Email" type="text" value="" />
+            </span>
+            </td>
+            </tr>
+            <tr>
+            <td style="width: 526.4px;" colspan="4">
+                <span style="font-weight: bold; color: #808080;">Địa chỉ</span>
+                <br /><span style="color: #808080;">
+                <input id="Dia_Chi" class="inputsad" name="Dia_Chi" type="text" value="" />
+            </span>
+            </td>
+            </tr>
+            <tr>
+            <td style="font-weight: bold; width: 526.4px;" colspan="4">
+                <span style="color: #808080;" >Y&ecirc;u cầu </span>
+                <br />
+                <span style="color: #808080;">
+                    <textarea id="Ghi_Chu" cols="60%" name="Ghi_Chu" rows="4">
+
+                    </textarea>
+                </span>
+            </td>
+            </tr>
+            </tbody>
+            </table>
+            </fieldset>
+            <div class="box-content">
+
+
+         <h3 class="text-center" style="color: #ff0000;">Chi tiết giá</h3>
+      <div class="box-content">
+        <table class="infoticket" width="100%" cellpadding="0" cellspacing="0">
+
+        <tbody><tr>
+        <td colspan="5" style="color: #016fae;font-size: 18px;font-weight: bold;">Chi tiết giá vé lượt đi</td>
+        </tr>
+        <tr>
+        <td><span>1 Người lớn</span></td>
+        <td><b>X</b></td>
+        <td style="text-align: right;">
+        <script type="text/javascript">
+        document.write(formatCurrency(199000));
+        </script>199.000 .VND
+        </td>
+        <td style="padding:0px;">=</td>
+        <td style="text-align: right;">
+       <td>
+            <b>.VND</b>
+        </td>
+
+
+
+        <!-- thue phi-->
+        <tr class="border-airline"><td colspan="5"></td></tr>
+        <tr><td colspan="5" style="font-weight:bold">Thuế và phí</td></tr>
+        <tr>
+        <td><span>1 Người lớn</span></td>
+        <td><b>X</b></td>
+        <td style="text-align: right;">
+        <script type="text/javascript">
+        document.write(formatCurrency(
+             730900));
+        </script>730.900 .VND
+        </td>
+        <td style="padding:0px;">=</td>
+        <td style="text-align: right;">
+        <script type="text/javascript">
+                    document.write(formatCurrency(730900));
+                    </script>730.900 .VND</td>
+
+        </tr>
+
+            <tr class="border-airline"><td colspan="5"></td></tr>
+        <tr>
+        <td><span style="font-weight:bold">Hành Lý</span></td>
+        <td colspan="4" id="valuehanhlyld"><span>0 VND</span></td>
+        </tr>
+        <tr class="border-airline"><td colspan="5"></td></tr>
+         <tr>
+         <td><span style="font-weight:bold">Tổng giá</span></td>
+
+                  <td></td><td></td><td></td>
+         <td id="totalld" style="font-weight:bold; text-align:right"><span data="929900"><script type="text/javascript">
+                    document.write(formatCurrency(929900));
+            </script>929.900 .VND</span></td>
+        </tr>
+
+        </tbody></table>
+        <!-- luot ve-->
+          </div>
+    </div>
+        <div class="form-group ">
+            <input type="submit" value="Thanh Toán" onclick="return checkfrom();" class="btn btn-danger" >
+        </div>
+
+        </div>
+    </form>
+
+{% endblock %}
+{% block map %}
+{% endblock %}
+{% block footer %}
+     {{ super() }}
+{% endblock %}
